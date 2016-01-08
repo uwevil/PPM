@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--main-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="main" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="OuSuisJe_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" height="15" alignment="center" text="Latitude 148.821" textAlignment="center" id="BsD-iq-w8I">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="11"/>
+                        </label>
+                        <label width="1" height="15" alignment="center" text="Longtitude 48.821" textAlignment="center" id="Bao-3S-gk7">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="11"/>
+                        </label>
+                        <imageView width="1" height="114" alignment="left" id="Azg-XS-FNV"/>
+                    </items>
+                    <menu key="menu" id="t0A-bh-yYu">
+                        <items>
+                            <menuItem title="Info" icon="info" id="01E-r6-YUr" userLabel="Info">
+                                <connections>
+                                    <action selector="infoAction" destination="AgC-eL-Hgc" id="TQZ-fw-wl7"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="imageV" destination="Azg-XS-FNV" id="Ym3-5r-ve7"/>
+                        <outlet property="latLabel" destination="BsD-iq-w8I" id="Olw-Pa-SM6"/>
+                        <outlet property="lngLabel" destination="Bao-3S-gk7" id="ba8-uY-CK8"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="347.5"/>
+        </scene>
+        <!--info-->
+        <scene sceneID="szn-TW-j1M">
+            <objects>
+                <controller identifier="info" id="bEv-RM-j0w">
+                    <items>
+                        <label width="1" height="1" alignment="left" text="DCS" textAlignment="center" id="OE1-Jx-cM1"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="486" y="347"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="OuSuisJe_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label width="1" height="1" alignment="left" text="Caculé à" textAlignment="center" id="DYt-G2-V03">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="left" id="uCw-4Q-Ouw">
+                            <items>
+                                <label width="1" height="1" alignment="left" text="Je suis au" textAlignment="center" id="wK0-1g-IDh">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="bodyLabel" destination="wK0-1g-IDh" id="cZC-26-JAp"/>
+                        <outlet property="titleLabel" destination="DYt-G2-V03" id="do3-Id-Kh7"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="OuSuisJe_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+</document>

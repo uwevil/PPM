@@ -1,0 +1,42 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CanvasMain"
+    android:id="@+id/frameLayout_fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.doancaosang.drawingapp.CanvasView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/canvasViewBlack" />
+    <com.doancaosang.drawingapp.CanvasView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/canvasViewBlue" />
+    <com.doancaosang.drawingapp.CanvasView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/canvasViewCyan" />
+    <com.doancaosang.drawingapp.CanvasView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/canvasViewGray" />
+    <com.doancaosang.drawingapp.CanvasView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/canvasViewGreen" />
+    <com.doancaosang.drawingapp.CanvasView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/canvasViewMagenta" />
+    <com.doancaosang.drawingapp.CanvasView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/canvasViewRed" />
+    <com.doancaosang.drawingapp.CanvasView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/canvasViewYellow" />
+</FrameLayout>

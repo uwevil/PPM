@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--portrait-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="portrait" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sKR-Dz-BF0">
+                                <rect key="frame" x="-27" y="-53" width="96" height="65"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3T-CX-oY5">
+                                <rect key="frame" x="200" y="90" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.43789299452626129" green="0.39459422240173225" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="UTm-vn-XpX"/>
+                                    <constraint firstAttribute="height" constant="200" id="Uds-YD-TR9"/>
+                                </constraints>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="31" y="100" width="200" height="200"/>
+                                </variation>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="284" y="412" width="200" height="200"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="284" y="412" width="200" height="200"/>
+                                </variation>
+                            </view>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ioZ-qd-4wQ">
+                                <rect key="frame" x="253" y="363" width="94" height="29"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="444" y="185" width="94" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="changeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="eOj-Ya-3US"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ioZ-qd-4wQ" firstAttribute="top" secondItem="I3T-CX-oY5" secondAttribute="bottom" constant="73" id="NfA-6y-kBv"/>
+                            <constraint firstAttribute="centerX" secondItem="ioZ-qd-4wQ" secondAttribute="centerX" id="O5b-BO-Pp6"/>
+                            <constraint firstItem="I3T-CX-oY5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="RdP-sH-j4A"/>
+                            <constraint firstAttribute="centerY" secondItem="ioZ-qd-4wQ" secondAttribute="centerY" id="cES-ss-cw3"/>
+                            <constraint firstAttribute="centerX" secondItem="I3T-CX-oY5" secondAttribute="centerX" id="eIe-P8-sR6"/>
+                            <constraint firstAttribute="centerY" secondItem="I3T-CX-oY5" secondAttribute="centerY" constant="110" id="lrV-yq-UNo"/>
+                            <constraint firstAttribute="trailing" secondItem="ioZ-qd-4wQ" secondAttribute="trailing" constant="50" id="nJd-nF-q1o"/>
+                            <constraint firstAttribute="centerY" secondItem="I3T-CX-oY5" secondAttribute="centerY" id="rgx-RJ-Dds"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RdP-sH-j4A"/>
+                                <exclude reference="rgx-RJ-Dds"/>
+                                <exclude reference="cES-ss-cw3"/>
+                                <exclude reference="nJd-nF-q1o"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="RdP-sH-j4A"/>
+                                <exclude reference="eIe-P8-sR6"/>
+                                <exclude reference="lrV-yq-UNo"/>
+                                <include reference="rgx-RJ-Dds"/>
+                                <exclude reference="NfA-6y-kBv"/>
+                                <exclude reference="O5b-BO-Pp6"/>
+                                <include reference="cES-ss-cw3"/>
+                                <include reference="nJd-nF-q1o"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="couleur" destination="I3T-CX-oY5" id="fJC-oF-qCE"/>
+                        <outlet property="stepper" destination="ioZ-qd-4wQ" id="HKr-25-4Et"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="396"/>
+        </scene>
+    </scenes>
+</document>

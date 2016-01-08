@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ex2_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOI-gX-Gqp">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.25154415032195376" green="0.3147069635572457" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="25n-20-pmL"/>
+                                    <constraint firstAttribute="width" constant="200" id="3e2-WO-q0P"/>
+                                    <constraint firstAttribute="height" constant="200" id="H5z-BJ-eGn"/>
+                                    <constraint firstAttribute="width" constant="200" id="hWy-TP-CYf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="25n-20-pmL"/>
+                                        <exclude reference="3e2-WO-q0P"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="99" y="100" width="200" height="200"/>
+                                    <mask key="constraints">
+                                        <include reference="25n-20-pmL"/>
+                                        <include reference="3e2-WO-q0P"/>
+                                        <exclude reference="H5z-BJ-eGn"/>
+                                        <exclude reference="hWy-TP-CYf"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="LWW-jE-8Gf">
+                                <rect key="frame" x="253" y="462" width="94" height="29"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="403" y="185" width="94" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="changeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="MYo-Da-tUB"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LWW-jE-8Gf" firstAttribute="top" secondItem="FOI-gX-Gqp" secondAttribute="bottom" constant="62" id="5ot-6s-F0L"/>
+                            <constraint firstAttribute="centerX" secondItem="LWW-jE-8Gf" secondAttribute="centerX" id="E7p-dX-2lO"/>
+                            <constraint firstAttribute="centerY" secondItem="FOI-gX-Gqp" secondAttribute="centerY" id="HST-l7-tGy"/>
+                            <constraint firstAttribute="centerY" secondItem="FOI-gX-Gqp" secondAttribute="centerY" id="Hdv-iv-3lX"/>
+                            <constraint firstAttribute="centerX" secondItem="FOI-gX-Gqp" secondAttribute="centerX" constant="100" id="arL-f3-bZN"/>
+                            <constraint firstItem="LWW-jE-8Gf" firstAttribute="leading" secondItem="FOI-gX-Gqp" secondAttribute="trailing" constant="104" id="b3W-qK-pS5"/>
+                            <constraint firstAttribute="centerX" secondItem="FOI-gX-Gqp" secondAttribute="centerX" id="pT5-Ni-ev1"/>
+                            <constraint firstAttribute="centerY" secondItem="LWW-jE-8Gf" secondAttribute="centerY" id="xp3-o5-vHv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HST-l7-tGy"/>
+                                <exclude reference="arL-f3-bZN"/>
+                                <exclude reference="b3W-qK-pS5"/>
+                                <exclude reference="xp3-o5-vHv"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="HST-l7-tGy"/>
+                                <exclude reference="Hdv-iv-3lX"/>
+                                <include reference="arL-f3-bZN"/>
+                                <exclude reference="pT5-Ni-ev1"/>
+                                <exclude reference="5ot-6s-F0L"/>
+                                <exclude reference="E7p-dX-2lO"/>
+                                <include reference="b3W-qK-pS5"/>
+                                <include reference="xp3-o5-vHv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="couleur" destination="FOI-gX-Gqp" id="Fh2-HP-B3L"/>
+                        <outlet property="stepper" destination="LWW-jE-8Gf" id="dvT-Tg-1OY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="534" y="650"/>
+        </scene>
+    </scenes>
+</document>
